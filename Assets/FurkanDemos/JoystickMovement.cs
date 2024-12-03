@@ -9,6 +9,7 @@ public class JoystickMovement : MonoBehaviour
     [SerializeField] private FixedJoystick joystick;
     private Vector3 input;
     private Rigidbody rb;
+    
 
     private void Awake()
     {
