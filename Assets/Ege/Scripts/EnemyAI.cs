@@ -9,13 +9,23 @@ public class EnemyAI : MonoBehaviour
     public Transform[]  waypoints;
     int waypointindex;
     Vector3 target;
+
+    public float radius;
+    [Range(0,360)]
+    public float angle;
     public GameObject player;
-    public float Deg = 45f;
+    public LayerMask targetMask;
+    public LayerMask obsMask;
+    public bool canSeePlayer;
+
+
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         UpdateDestination();
+        player = GameObject.FindGameObjectWithTag("Player");
+        StartCoroutine(FOVRoutine());
     }
 
     void Update()
@@ -26,10 +36,54 @@ public class EnemyAI : MonoBehaviour
             UpdateDestination();
         }
 
-        Vector3 dir = player.transform.position - transform.position;
-        if(Mathf.Abs(Vector3.Angle(transform.forward, dir)) < Deg)
+        if(canSeePlayer)
         {
             Debug.Log("YAKALANDIN!");
+        }
+
+    }
+
+    private IEnumerator FOVRoutine()
+    {
+        WaitForSeconds wait = new WaitForSeconds(0.2f);
+
+        while(true)
+        {
+            yield return wait;
+            FieldOfViewCheck();
+        }
+    }
+
+    private void FieldOfViewCheck()
+    {
+        Collider[] rangeChecks = Physics.OverlapSphere(transform.position, radius, targetMask);
+
+        if(rangeChecks.Length != 0)
+        {
+            Transform target = rangeChecks[0].transform;
+            Vector3 dir = (target.position - transform.position).normalized;
+
+            if(Vector3.Angle(transform.forward, dir) < angle/2)
+            {
+                float dis = Vector3.Distance(transform.position, target.position);
+
+                if(!Physics.Raycast(transform.position, dir, dis, obsMask))
+                {
+                    canSeePlayer = true;
+                }
+                else
+                {
+                    canSeePlayer = false;
+                }
+            }
+            else
+            {
+                canSeePlayer = false;
+            }
+        }
+        else if(canSeePlayer)
+        {
+            canSeePlayer = false;
         }
     }
 
