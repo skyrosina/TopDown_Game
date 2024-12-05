@@ -18,10 +18,13 @@ public class EnemyAI : MonoBehaviour
     public LayerMask obsMask;
     public bool canSeePlayer;
 
+    private Animator animator; // Düþman animasyonu için 
+
 
 
     void Start()
     {
+        animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
         UpdateDestination();
         player = GameObject.FindGameObjectWithTag("Player");
