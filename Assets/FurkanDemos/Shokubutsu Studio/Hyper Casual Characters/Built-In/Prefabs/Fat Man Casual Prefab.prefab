@@ -53,12 +53,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7642615965937147732, guid: d28a87c602d2644488df2a4eaf0ebcb8, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1060735147620948667, guid: 265de07f8509f1440b9458d9078377b9, type: 3}
+    - target: {fileID: -7642615965937147732, guid: d28a87c602d2644488df2a4eaf0ebcb8, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: d403e386c3464b849b4177e4dc844616, type: 2}
     - target: {fileID: 919132149155446097, guid: d28a87c602d2644488df2a4eaf0ebcb8, type: 3}
       propertyPath: m_Name
-      value: Fat Man 01 Casual Variant
+      value: Fat Man Casual Prefab
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
