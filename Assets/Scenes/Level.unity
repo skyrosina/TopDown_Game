@@ -2157,6 +2157,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PrisionFull
       objectReference: {fileID: 0}
+    - target: {fileID: 3545278417449866343, guid: 51701c365200f374db4d9e754b27ed53, type: 3}
+      propertyPath: m_TagString
+      value: Door
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 65702495048144492, guid: 51701c365200f374db4d9e754b27ed53, type: 3}
@@ -2321,9 +2325,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -830241884436464765, guid: 51701c365200f374db4d9e754b27ed53, type: 3}
       insertIndex: -1
       addedObject: {fileID: 198920133}
-    - targetCorrespondingSourceObject: {fileID: 5050422055867433376, guid: 51701c365200f374db4d9e754b27ed53, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1110102836}
     - targetCorrespondingSourceObject: {fileID: 3545278417449866343, guid: 51701c365200f374db4d9e754b27ed53, type: 3}
       insertIndex: -1
       addedObject: {fileID: 411854443}
@@ -2530,8 +2531,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.18983887, y: 0.09250623, z: 0.11830472}
-  m_Center: {x: -0.07857803, y: 0.00038833535, z: -0.0026096103}
+  m_Size: {x: 0.18983887, y: 0.40993527, z: 0.11830472}
+  m_Center: {x: -0.07857803, y: -0.15832618, z: -0.0026096103}
 --- !u!1 &468202141 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5532024940013282207, guid: 51701c365200f374db4d9e754b27ed53, type: 3}
@@ -5485,32 +5486,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.039999995, y: 0.0019999994, z: 0.029606193}
   m_Center: {x: -0.0000000037252903, y: 0.000000014901161, z: -4.6566118e-10}
---- !u!1 &1110102833 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5050422055867433376, guid: 51701c365200f374db4d9e754b27ed53, type: 3}
-  m_PrefabInstance: {fileID: 360489216}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1110102836
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1110102833}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1113579199 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1209947779274012078, guid: 51701c365200f374db4d9e754b27ed53, type: 3}
@@ -8861,8 +8836,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.039999995, y: 0.0019999994, z: 0.029606193}
-  m_Center: {x: -0.000000014901161, y: 0.000000029802322, z: 4.656614e-10}
+  m_Size: {x: 0.025632596, y: 0.0019999994, z: 0.029606193}
+  m_Center: {x: -0.0071836575, y: 0.000000029778196, z: 1.0657243e-22}
 --- !u!1 &2029784616
 GameObject:
   m_ObjectHideFlags: 0

@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
         if(other.gameObject.tag == "Door" && holdingKey == true)
         {
             Door.SetActive(false);
+            other.GetComponent<BoxCollider>().enabled = false;
         }
     }
 
