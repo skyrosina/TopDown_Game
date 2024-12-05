@@ -7,7 +7,13 @@ public class PlayerController : MonoBehaviour
     public FixedJoystick joystick; // Joystick referansý
     public float moveSpeed = 5f; // Hareket hýzý
     public float rotationSpeed = 10f; // Dönüþ hýzý
+    private Animator animator;
 
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     void Update()
     {
@@ -15,7 +21,14 @@ public class PlayerController : MonoBehaviour
         Vector2 input = new Vector2(joystick.Horizontal, joystick.Vertical);
 
         // Eðer joystick hareket etmiyorsa çýk
-        if (input.magnitude < 0.1f) return;
+        if (input.magnitude < 0.1f) {
+            animator.SetBool("isRunning", false);
+            return;
+        } 
+        if(input.magnitude > 0.1f)
+        {
+            animator.SetBool("isRunning", true);
+        }
 
         // Hareket iþlemi
         Vector3 moveDirection = new Vector3(input.x, 0, input.y).normalized;
