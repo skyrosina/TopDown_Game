@@ -9,6 +9,23 @@ public class PlayerController : MonoBehaviour
     public float rotationSpeed = 10f; // Dönüþ hýzý
     private Animator animator;
 
+    //Ege Pickup Key
+    public GameObject Key;
+    public bool holdingKey = false;
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "Key")
+        {
+            Key.SetActive(false);
+            holdingKey = true;
+        }
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+
 
     private void Start()
     {
