@@ -18,7 +18,7 @@ public class EnemyAI : MonoBehaviour
     public LayerMask obsMask;
     public bool canSeePlayer;
 
-    private Animator animator; // Düþman animasyonu için 
+    private Animator animator; /* Düþman animasyonu için */
 
 
 

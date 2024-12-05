@@ -2173,6 +2173,7 @@ PrefabInstance:
     - {fileID: 133046516620623714, guid: 51701c365200f374db4d9e754b27ed53, type: 3}
     - {fileID: 5401286140696434487, guid: 51701c365200f374db4d9e754b27ed53, type: 3}
     - {fileID: -3299533176686943485, guid: 51701c365200f374db4d9e754b27ed53, type: 3}
+    - {fileID: -5452368011206649151, guid: 51701c365200f374db4d9e754b27ed53, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7349655231179780853, guid: 51701c365200f374db4d9e754b27ed53, type: 3}
@@ -2319,9 +2320,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7767507478279334453, guid: 51701c365200f374db4d9e754b27ed53, type: 3}
       insertIndex: -1
       addedObject: {fileID: 617808925}
-    - targetCorrespondingSourceObject: {fileID: -5452368011206649151, guid: 51701c365200f374db4d9e754b27ed53, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1603796694}
     - targetCorrespondingSourceObject: {fileID: -830241884436464765, guid: 51701c365200f374db4d9e754b27ed53, type: 3}
       insertIndex: -1
       addedObject: {fileID: 198920133}
@@ -5053,6 +5051,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GuardianEnemy Variant (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5018641153045410064, guid: 4e819b23454e8af42b6ec226f53f1a41, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5687513227103955882, guid: 4e819b23454e8af42b6ec226f53f1a41, type: 3}
       propertyPath: m_LocalPosition.x
       value: -30
@@ -7460,32 +7462,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.039999995, y: 0.0019999994, z: 0.029606193}
   m_Center: {x: -0.000000014901161, y: 0.000000014901161, z: -4.6566118e-10}
---- !u!1 &1603796690 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -5452368011206649151, guid: 51701c365200f374db4d9e754b27ed53, type: 3}
-  m_PrefabInstance: {fileID: 360489216}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1603796694
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1603796690}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.018746007, y: 0.048497133, z: 0.024009923}
-  m_Center: {x: -0.00000023841858, y: -0.019611925, z: -9.313226e-10}
 --- !u!1 &1607369846 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8650922657799828489, guid: 51701c365200f374db4d9e754b27ed53, type: 3}
@@ -8658,6 +8634,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GuardianEnemy Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 5018641153045410064, guid: 4e819b23454e8af42b6ec226f53f1a41, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5687513227103955882, guid: 4e819b23454e8af42b6ec226f53f1a41, type: 3}
       propertyPath: m_LocalPosition.x
       value: 23
@@ -9054,6 +9034,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GuardianEnemy Variant (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5018641153045410064, guid: 4e819b23454e8af42b6ec226f53f1a41, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5687513227103955882, guid: 4e819b23454e8af42b6ec226f53f1a41, type: 3}
       propertyPath: m_LocalPosition.x
       value: -100
@@ -9357,6 +9341,10 @@ PrefabInstance:
     - target: {fileID: 5018641153045410064, guid: 4e819b23454e8af42b6ec226f53f1a41, type: 3}
       propertyPath: m_Name
       value: GuardianEnemy Variant (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5018641153045410064, guid: 4e819b23454e8af42b6ec226f53f1a41, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5687513227103955882, guid: 4e819b23454e8af42b6ec226f53f1a41, type: 3}
       propertyPath: m_LocalPosition.x
