@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
 
     //Ege Pickup Key
     public GameObject Key;
+    public GameObject Door;
     public bool holdingKey = false;
 
     private void OnTriggerStay(Collider other)
@@ -19,6 +20,11 @@ public class PlayerController : MonoBehaviour
         {
             Key.SetActive(false);
             holdingKey = true;
+        }
+
+        if(other.gameObject.tag == "Door" && holdingKey == true)
+        {
+            Door.SetActive(false);
         }
     }
 
