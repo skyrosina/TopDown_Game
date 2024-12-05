@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     public GameObject Key;
     public GameObject Door;
     public bool holdingKey = false;
+    public bool followme = false;
 
     private void OnTriggerStay(Collider other)
     {
@@ -26,6 +27,7 @@ public class PlayerController : MonoBehaviour
         {
             Door.SetActive(false);
             other.GetComponent<BoxCollider>().enabled = false;
+            followme = true;
         }
     }
 

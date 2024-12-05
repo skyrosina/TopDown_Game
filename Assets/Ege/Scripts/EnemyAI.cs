@@ -6,6 +6,8 @@ using UnityEngine.AI;
 public class EnemyAI : MonoBehaviour
 {
     NavMeshAgent agent;
+    PlayerController pc;
+    public GameObject ant;
     public Transform[]  waypoints;
     int waypointindex;
     Vector3 target;
@@ -29,6 +31,8 @@ public class EnemyAI : MonoBehaviour
         UpdateDestination();
         player = GameObject.FindGameObjectWithTag("Player");
         StartCoroutine(FOVRoutine());
+
+        pc = ant.GetComponent<PlayerController>();
     }
 
     void Update()
@@ -44,7 +48,12 @@ public class EnemyAI : MonoBehaviour
             Debug.Log("YAKALANDIN!");
         }
 
+        /*if(pc.followme == true)
+        {
+            agent.speed *= 3;
+        }*/
     }
+
 
     private IEnumerator FOVRoutine()
     {

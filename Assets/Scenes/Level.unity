@@ -614,6 +614,47 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 66483748}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &90845497 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1623247460424310851, guid: 5ca25b97ebdacc84785c4976ba4376c1, type: 3}
+  m_PrefabInstance: {fileID: 824750502}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &90845498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90845497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d35eb9f21f7e5b846aae6a0a94ab6b80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ant: {fileID: 2044471286}
+  player: {fileID: 2044471291}
+--- !u!195 &90845503
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90845497}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 3
+  m_Speed: 15
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 3
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &112110877
 GameObject:
   m_ObjectHideFlags: 0
@@ -4951,7 +4992,13 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 2253347608499955103, guid: 5ca25b97ebdacc84785c4976ba4376c1, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1623247460424310851, guid: 5ca25b97ebdacc84785c4976ba4376c1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 90845498}
+    - targetCorrespondingSourceObject: {fileID: 1623247460424310851, guid: 5ca25b97ebdacc84785c4976ba4376c1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 90845503}
   m_SourcePrefab: {fileID: 100100000, guid: 5ca25b97ebdacc84785c4976ba4376c1, type: 3}
 --- !u!1 &829058867
 GameObject:
@@ -5388,8 +5435,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.036518164, y: 0.0008582808, z: 0.02642367}
-  m_Center: {x: -0.0006408524, y: 0.000000031897798, z: -0.0000000041909503}
+  m_Size: {x: 0.039549652, y: 0.0008582808, z: 0.026423674}
+  m_Center: {x: -0.002156598, y: 0.00000003190672, z: -0.00000000406455}
 --- !u!1001 &975098553
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5410,6 +5457,10 @@ PrefabInstance:
       propertyPath: m_WarningMessage
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3410355087517800535, guid: 4e819b23454e8af42b6ec226f53f1a41, type: 3}
+      propertyPath: ant
+      value: 
+      objectReference: {fileID: 2044471286}
     - target: {fileID: 3410355087517800535, guid: 4e819b23454e8af42b6ec226f53f1a41, type: 3}
       propertyPath: player
       value: 
@@ -7232,8 +7283,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.039999995, y: 0.0020000017, z: 0.029999996}
-  m_Center: {x: -0.000000029802322, y: -0.000000014901161, z: -0.0000000027939677}
+  m_Size: {x: 0.041085687, y: 0.0020000015, z: 0.029999992}
+  m_Center: {x: 0.000542819, y: -0.000000014889098, z: -0.0000000033086882}
 --- !u!1 &1438310071
 GameObject:
   m_ObjectHideFlags: 0
@@ -8994,6 +9045,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3410355087517800535, guid: 4e819b23454e8af42b6ec226f53f1a41, type: 3}
+      propertyPath: ant
+      value: 
+      objectReference: {fileID: 2044471286}
+    - target: {fileID: 3410355087517800535, guid: 4e819b23454e8af42b6ec226f53f1a41, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 2044471286}
@@ -9191,8 +9246,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.025632596, y: 0.0019999994, z: 0.029606193}
-  m_Center: {x: -0.0071836575, y: 0.000000029778196, z: 1.0657243e-22}
+  m_Size: {x: 0.028007839, y: 0.0019999994, z: 0.029606193}
+  m_Center: {x: -0.008371283, y: 0.000000029778196, z: 1.0657243e-22}
 --- !u!1 &2029784616
 GameObject:
   m_ObjectHideFlags: 0
@@ -9385,6 +9440,10 @@ PrefabInstance:
       propertyPath: m_WarningMessage
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3410355087517800535, guid: 4e819b23454e8af42b6ec226f53f1a41, type: 3}
+      propertyPath: ant
+      value: 
+      objectReference: {fileID: 2044471286}
     - target: {fileID: 3410355087517800535, guid: 4e819b23454e8af42b6ec226f53f1a41, type: 3}
       propertyPath: player
       value: 
@@ -9693,6 +9752,10 @@ PrefabInstance:
       propertyPath: m_WarningMessage
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3410355087517800535, guid: 4e819b23454e8af42b6ec226f53f1a41, type: 3}
+      propertyPath: ant
+      value: 
+      objectReference: {fileID: 2044471286}
     - target: {fileID: 3410355087517800535, guid: 4e819b23454e8af42b6ec226f53f1a41, type: 3}
       propertyPath: player
       value: 
