@@ -10302,7 +10302,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9053469929927311981, guid: 5ca25b97ebdacc84785c4976ba4376c1, type: 3}
       propertyPath: holdingKey
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9053469929927311981, guid: 5ca25b97ebdacc84785c4976ba4376c1, type: 3}
       propertyPath: rotationSpeed

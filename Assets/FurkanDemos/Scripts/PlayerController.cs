@@ -13,7 +13,9 @@ public class PlayerController : MonoBehaviour
     public GameObject Key;
     public GameObject Door;
     public bool holdingKey = false;
-    public bool followme = false;
+    public bool followMe = false;
+
+    public Vector2 input;
 
     private void OnTriggerStay(Collider other)
     {
@@ -27,7 +29,7 @@ public class PlayerController : MonoBehaviour
         {
             Door.SetActive(false);
             other.GetComponent<BoxCollider>().enabled = false;
-            followme = true;
+            followMe = true;
         }
     }
 
@@ -41,17 +43,21 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
+    
+
+    
     void Update()
     {
         // Joystick yön vektörünü al
-        Vector2 input = new Vector2(joystick.Horizontal, joystick.Vertical);
+        input = new Vector2(joystick.Horizontal, joystick.Vertical);
 
         // Eðer joystick hareket etmiyorsa çýk
-        if (input.magnitude < 0.1f) {
+        if (input.magnitude < 0.1f)
+        {
             animator.SetBool("isRunning", false);
             return;
-        } 
-        if(input.magnitude > 0.1f)
+        }
+        if (input.magnitude > 0.1f)
         {
             animator.SetBool("isRunning", true);
         }
@@ -64,4 +70,6 @@ public class PlayerController : MonoBehaviour
         Quaternion toRotation = Quaternion.LookRotation(moveDirection, Vector3.up);
         transform.rotation = Quaternion.Lerp(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
     }
+
+    
 }
