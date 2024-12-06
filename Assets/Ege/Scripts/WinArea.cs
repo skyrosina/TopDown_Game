@@ -16,11 +16,11 @@ public class WinArea : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(pc.followme == true)
+        /*if(pc.followme == true)
         {
             SceneManager.LoadScene("Win");
             Debug.Log("sik");
-        }
+        }*/
         
     }
 }
