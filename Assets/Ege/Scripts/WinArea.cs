@@ -14,13 +14,12 @@ public class WinArea : MonoBehaviour
     }
 
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        /*if(pc.followme == true)
+        if (pc.followMe == true)
         {
             SceneManager.LoadScene("Win");
             Debug.Log("sik");
-        }*/
-        
+        }
     }
 }
