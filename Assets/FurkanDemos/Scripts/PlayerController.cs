@@ -18,6 +18,10 @@ public class PlayerController : MonoBehaviour
 
     public Vector2 input;
 
+    private MusicManager musicManager;
+
+    
+    
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "Key")
@@ -32,6 +36,7 @@ public class PlayerController : MonoBehaviour
             AlarmLight.SetActive(true);
             other.GetComponent<BoxCollider>().enabled = false;
             followMe = true;
+            musicManager.UpdateMusic(true); // Alarmýn çalýþmasý için.
         }
     }
 
@@ -43,6 +48,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
+        musicManager = FindObjectOfType<MusicManager>();
     }
 
     
@@ -71,6 +77,8 @@ public class PlayerController : MonoBehaviour
         // Dönme iþlemi
         Quaternion toRotation = Quaternion.LookRotation(moveDirection, Vector3.up);
         transform.rotation = Quaternion.Lerp(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
+
+
     }
 
     
