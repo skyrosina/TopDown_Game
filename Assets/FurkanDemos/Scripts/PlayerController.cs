@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     //Ege Pickup Key
     public GameObject Key;
     public GameObject Door;
+    public GameObject AlarmLight;
     public bool holdingKey = false;
     public bool followMe = false;
 
@@ -28,6 +29,7 @@ public class PlayerController : MonoBehaviour
         if(other.gameObject.tag == "Door" && holdingKey == true)
         {
             Door.SetActive(false);
+            AlarmLight.SetActive(true);
             other.GetComponent<BoxCollider>().enabled = false;
             followMe = true;
         }
